@@ -11,11 +11,11 @@ var _usuarios = require("../controllers/usuarios.controller");
 
 var router = (0, _express.Router)();
 //api/usuarios
-router.get("/", _usuarios.getUsuarios);
-router.post("/", _usuarios.createUsuario); // api/usuarios/:id_usuario
+router.post("/", _usuarios.createUsuario);
+router.get("/", _usuarios.getUsuarios); // api/usuarios/:id_usuario
 // id_uduario = id
 
-router.get("/", _usuarios.getOneUsuario);
-router.put("/", _usuarios.updateUsuario);
+router.get("/:id", _usuarios.getOneUsuario);
+router.put("/:id", _usuarios.updateUsuario);
 var _default = router;
 exports["default"] = _default;

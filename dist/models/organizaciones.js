@@ -53,12 +53,12 @@ var Organizacion = _database.sequelize.define("organizaciones", {
 
 
 Organizacion.hasMany(_usuarios["default"], {
-  foreingKey: "id_organizacion",
+  foreignKey: "id_organizacion",
   sourceKey: "id_organizacion"
 });
 
 _usuarios["default"].belongsTo(Organizacion, {
-  foreingKey: "id_organizacion",
+  foreignKey: "id_organizacion",
   sourceKey: "id_organizacion"
 });
 

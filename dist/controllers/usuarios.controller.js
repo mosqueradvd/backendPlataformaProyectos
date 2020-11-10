@@ -61,7 +61,7 @@ function _createUsuario() {
             _req$body = req.body, nombres_apellidos = _req$body.nombres_apellidos, id_tipo_identificacion = _req$body.id_tipo_identificacion, identificacion = _req$body.identificacion, id_tipo_usuario = _req$body.id_tipo_usuario, id_organizacion = _req$body.id_organizacion, email = _req$body.email, clave = _req$body.clave, estado = _req$body.estado, telefono = _req$body.telefono;
             _context2.prev = 1;
             _context2.next = 4;
-            return _usuarios["default"].crete({
+            return _usuarios["default"].create({
               nombres_apellidos: nombres_apellidos,
               id_tipo_identificacion: id_tipo_identificacion,
               identificacion: identificacion,
@@ -89,18 +89,19 @@ function _createUsuario() {
             }));
 
           case 7:
-            _context2.next = 12;
+            _context2.next = 13;
             break;
 
           case 9:
             _context2.prev = 9;
             _context2.t0 = _context2["catch"](1);
+            console.log("Internal Error", _context2.t0);
             res.status(500).json({
               message: "Ocurrió un error",
               data: {}
             });
 
-          case 12:
+          case 13:
           case "end":
             return _context2.stop();
         }

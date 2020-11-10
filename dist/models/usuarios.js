@@ -9,6 +9,8 @@ var _sequelize = _interopRequireDefault(require("sequelize"));
 
 var _database = require("../database/database");
 
+var _organizaciones = _interopRequireDefault(require("./organizaciones"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 //conexión

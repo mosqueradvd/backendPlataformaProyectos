@@ -98,18 +98,19 @@ function _createOrganizacion() {
             }));
 
           case 7:
-            _context2.next = 12;
+            _context2.next = 13;
             break;
 
           case 9:
             _context2.prev = 9;
             _context2.t0 = _context2["catch"](1);
+            console.log("Internal Error", _context2.t0);
             res.status(500).json({
               message: "Hubo un error",
               data: {}
             });
 
-          case 12:
+          case 13:
           case "end":
             return _context2.stop();
         }
@@ -150,7 +151,7 @@ function _getOneOrganizacion() {
           case 8:
             _context3.prev = 8;
             _context3.t0 = _context3["catch"](0);
-            console.log(_context3.t0);
+            console.error("Error fetching data", _context3.t0);
 
           case 11:
           case "end":
@@ -223,7 +224,7 @@ function _updateOrganizacion() {
             }
 
             return _context5.abrupt("return", res.json({
-              message: "proyecto actualizado",
+              message: "organización actualizada",
               data: organizaciones
             }));
 
