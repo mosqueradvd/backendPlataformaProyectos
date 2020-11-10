@@ -46,11 +46,11 @@ const Organizacion = sequelize.define(
 
 // organizaciones tiene muchos usuarios
 Organizacion.hasMany(usuarios, {
-  foreingKey: "id_organizacion",
+  foreignKey: "id_organizacion",
   sourceKey: "id_organizacion",
 });
 usuarios.belongsTo(Organizacion, {
-  foreingKey: "id_organizacion",
+  foreignKey: "id_organizacion",
   sourceKey: "id_organizacion",
 });
 

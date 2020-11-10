@@ -1,8 +1,7 @@
 import Sequelize from "sequelize";
 //conexión
 import { sequelize } from "../database/database";
-
-
+import Organizacion from "./organizaciones";
 
 const usuarios = sequelize.define(
   "usuarios",

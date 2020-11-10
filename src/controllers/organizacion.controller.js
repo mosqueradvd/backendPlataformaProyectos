@@ -59,6 +59,7 @@ export async function createOrganizacion(req, res) {
       });
     }
   } catch (e) {
+    console.log("Internal Error", e);
     res.status(500).json({
       message: "Hubo un error",
       data: {},
@@ -78,7 +79,7 @@ export async function getOneOrganizacion(req, res) {
       data: organizacion,
     });
   } catch (e) {
-    console.log(e);
+    console.error("Error fetching data", e);
   }
 }
 
@@ -133,7 +134,7 @@ export async function updateOrganizacion(req, res) {
     }
 
     return res.json({
-      message: "proyecto actualizado",
+      message: "organización actualizada",
       data: organizaciones,
     });
   } catch (e) {
